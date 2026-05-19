@@ -406,7 +406,7 @@ class AppTutoriasPersistente(ctk.CTk):
                 tutoria_ya_paso = False
                 try:
                     fecha_tutoria = datetime.strptime(ses_obj.dias, "%Y-%m-%d")
-                    if ahora.date() > fecha_tutoria.date():
+                    if ahora.date() >= fecha_tutoria.date():
                         tutoria_ya_paso = True
                 except ValueError:
                     pass
@@ -418,33 +418,33 @@ class AppTutoriasPersistente(ctk.CTk):
                 txt = f"Materia: {tut['materia']}  |  Horario: {tut['horario']}\nEstado de Solicitud: {tut['estado']}  |  Tu Evaluación: {calif_str}"
                 ctk.CTkLabel(item, text=txt, justify="left").pack(side="left", padx=15, pady=10)
                 
-                if tutoria_ya_paso:
-                    if tut['estado'] == 'ACEPTADA' and tut['calificacion_al_tutor'] is None:
-                        def lanzar_calificar(id_s=tut['id_sesion']):
-                            pop = ctk.CTkToplevel(self)
-                            pop.geometry("320x200")
-                            pop.title("Calificar Sesión")
-                            pop.attributes("-topmost", True)
-                            
-                            ctk.CTkLabel(pop, text="Evalúa las Estrellas (0 al 5)", font=("Arial", 14, "bold")).pack(pady=15)
-                            sld = ctk.CTkSlider(pop, from_=0, to=5, number_of_steps=5)
-                            sld.pack(pady=10)
-                            sld.set(5)
-                            
-                            def guardar_calif():
-                                estrellas = int(sld.get())
-                                s_real = self.sistema.obtener_sesion_por_id(id_s)
-                                user.evaluar_tutoria(s_real.tutor, id_s, estrellas)
-                                self.guardar_datos_a_csv() 
-                                messagebox.showinfo("Aportación", "¡Gracias por tu aportación!")
-                                pop.destroy()
-                                render_historial()
-                            
-                            ctk.CTkButton(pop, text="Enviar Calificación", fg_color="#2b5797", command=guardar_calif).pack(pady=10)
+                if tut['estado'] == 'ACEPTADA' and tut['calificacion_al_tutor'] is None:
+                    def lanzar_calificar(id_s=tut['id_sesion']):
+                        pop = ctk.CTkToplevel(self)
+                        pop.geometry("320x200")
+                        pop.title("Calificar Sesión")
+                        pop.attributes("-topmost", True)
                         
-                        ctk.CTkButton(item, text="Calificar Tutor", fg_color="green", width=110, command=lanzar_calificar).pack(side="right", padx=15)
-                else:
-                    if tut['estado'] in ['PENDIENTE', 'ACEPTADA']:
+                        ctk.CTkLabel(pop, text="Evalúa las Estrellas (0 al 5)", font=("Arial", 14, "bold")).pack(pady=15)
+                        sld = ctk.CTkSlider(pop, from_=0, to=5, number_of_steps=5)
+                        sld.pack(pady=10)
+                        sld.set(5)
+                        
+                        def guardar_calif():
+                            estrellas = int(sld.get())
+                            s_real = self.sistema.obtener_sesion_por_id(id_s)
+                            user.evaluar_tutoria(s_real.tutor, id_s, estrellas)
+                            self.guardar_datos_a_csv() 
+                            messagebox.showinfo("Aportación", "¡Gracias por tu aportación!")
+                            pop.destroy()
+                            render_historial()
+                        
+                        ctk.CTkButton(pop, text="Enviar Calificación", fg_color="#2b5797", command=guardar_calif).pack(pady=10)
+                    
+                    ctk.CTkButton(item, text="Calificar Tutor", fg_color="green", width=110, command=lanzar_calificar).pack(side="right", padx=15)
+                
+                if not tutoria_ya_paso:
+                    if tut['estado'] == 'PENDIENTE' or (tut['estado'] == 'ACEPTADA' and tut['calificacion_al_tutor'] is None):
                         def cancelar_click(id_s=tut['id_sesion']):
                             user.cancelar_tutoria(id_s)
                             reg = next((t for t in user.historial_tutorias if t["id_sesion"] == id_s), None)
@@ -658,3 +658,4 @@ class AppTutoriasPersistente(ctk.CTk):
 if __name__ == "__main__":
     app = AppTutoriasPersistente()
     app.mainloop()
+    
