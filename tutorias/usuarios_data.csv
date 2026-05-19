@@ -1,0 +1,15 @@
+id_persona,tipo,nombre,email,contrasena,activa,campo_extra,descripcion
+1,tutor,Profe Jimmy,jimmychingon@gmail.com,123,True,Programación,Especialista en Python y Algoritmos.
+2,tutor,Mtra. Elena Rostova,elena@gmail.com,123,True,"Cálculo Diferencial, Álgebra Lineal",Explicaciones paso a paso sin complicaciones.
+3,tutor,Ing. Carlos Mendoza,carlos@gmail.com,123,True,"Estructuras de Datos, Redes",Enfoque 100% práctico y orientado a proyectos.
+4,tutor,Dra. Beatriz Juárez,beatriz@gmail.com,123,True,"Química Orgánica, Termodinámica",Asesorías de alta exigencia académica.
+5,tutor,Prof. Samuel Vance,samuel@gmail.com,123,True,"Física Mecánica, Óptica",Resolución metódica de guías de examen.
+8,estudiante,Anya Forger,alumno3@gmail.com,123,True,Básica,
+9,estudiante,Laura Giraldo,alumno4@gmail.com,123,True,Superior,
+10,estudiante,Roberto S.,alumno5@gmail.com,123,True,Superior,
+6,estudiante,Danna Patricia,danna@gmail.com,2801,True,Superior,
+7,estudiante,Damian Desmond,alumno02@gmail.com,321,True,Media,
+11,estudiante,Adam,dfdfd@ggmail.com,12345,True,nub,
+12,estudiante,Jax,jax@gmail.com,pomni,True,pro,
+13,estudiante,lssdad,"pio@gmail,com",123,True,mates,
+14,tutor,Tutora,tutora@gmail.com,12345,True,tutora,Tutor Ofertante

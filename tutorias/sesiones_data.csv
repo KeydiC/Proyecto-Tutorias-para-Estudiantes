@@ -1,0 +1,12 @@
+id_sesion,materia_nombre,materia_area,tutor_email,dias,hora_inicio,hora_final,cupo_maximo,alumnos_inscritos
+4,Cálculo Diferencial,Matemáticas,elena@gmail.com,2026-05-12,08:00 am,09:30 am,6,2
+5,Álgebra Lineal,Matemáticas,elena@gmail.com,2026-05-21,11:00 am,12:30 pm,10,3
+6,Estructuras de Datos,Tecnología,carlos@gmail.com,2026-05-18,02:00 pm,03:30 pm,5,1
+7,Estructuras de Datos,Tecnología,carlos@gmail.com,2026-05-22,04:00 pm,05:30 pm,5,2
+8,Química Orgánica,Ciencias,beatriz@gmail.com,2026-05-13,03:00 pm,04:30 pm,4,2
+9,Química Orgánica,Ciencias,beatriz@gmail.com,2026-05-22,10:00 am,11:30 am,6,2
+10,Física Mecánica,Ciencias,samuel@gmail.com,2026-05-14,01:00 pm,02:30 pm,5,1
+11,Física Mecánica,Ciencias,samuel@gmail.com,2026-05-19,12:00 pm,01:30 pm,5,1
+12,Programación Avanzada,Programación,jimmychingon@gmail.com,2026-05-19,12:00 pm,02:00 pm,5,1
+1,Cálculo Diferencial,Matemáticas,jimmychingon@gmail.com,2026-05-19,03:00 pm,05:00 pm,10,1
+2,Tutoria,tutoria,tutora@gmail.com,30-02-2027,3:33,3:34,5,0

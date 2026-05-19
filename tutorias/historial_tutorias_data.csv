@@ -1,0 +1,17 @@
+alumno_email,id_sesion,materia,horario,estado,calificacion_al_tutor
+alumno3@gmail.com,6,Estructuras de Datos,2026-05-18 02:00 pm-03:30 pm,ACEPTADA,
+alumno3@gmail.com,10,Física Mecánica,2026-05-14 01:00 pm-02:30 pm,ACEPTADA,5.0
+alumno4@gmail.com,8,Química Orgánica,2026-05-13 03:00 pm-04:30 pm,ACEPTADA,3.0
+alumno4@gmail.com,9,Química Orgánica,2026-05-22 10:00 am-11:30 am,ACEPTADA,
+alumno5@gmail.com,11,Física Mecánica,2026-05-19 12:00 pm-01:30 pm,ACEPTADA,
+danna@gmail.com,5,Álgebra Lineal,2026-05-21 11:00 am-12:30 pm,CANCELADA,
+danna@gmail.com,9,Química Orgánica,2026-05-22 10:00 am-11:30 am,PENDIENTE,
+danna@gmail.com,7,Estructuras de Datos,2026-05-22 04:00 pm-05:30 pm,PENDIENTE,
+danna@gmail.com,1,Cálculo Diferencial,2026-05-19 03:00 pm-05:00 pm,ACEPTADA,
+danna@gmail.com,12,Programación Avanzada,2026-05-19 12:00 pm-02:00 pm,RECHAZADA,
+alumno02@gmail.com,4,Cálculo Diferencial,2026-05-12 08:00 am-09:30 am,ACEPTADA,4.0
+alumno02@gmail.com,5,Álgebra Lineal,2026-05-21 11:00 am-12:30 pm,ACEPTADA,
+jax@gmail.com,4,Cálculo Diferencial,2026-05-12 08:00 am-09:30 am,PENDIENTE,
+jax@gmail.com,8,Química Orgánica,2026-05-13 03:00 pm-04:30 pm,PENDIENTE,
+jax@gmail.com,7,Estructuras de Datos,2026-05-22 04:00 pm-05:30 pm,PENDIENTE,
+jax@gmail.com,5,Álgebra Lineal,2026-05-21 11:00 am-12:30 pm,PENDIENTE,
