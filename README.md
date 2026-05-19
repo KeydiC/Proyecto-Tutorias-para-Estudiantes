@@ -27,7 +27,7 @@ El sistema segmenta las herramientas y vistas según el rol del usuario autentic
 
 ### 📊 Módulo de Análisis e Indicadores (Administración)
 * **Visualización de Datos:** Generación automatizada de gráficos estadísticos para identificar las asignaturas más solicitadas y los tutores con mayor actividad.
-* **Detección de "Cuellos de Botella":** Análisis de tendencias temporales de solicitudes para que la institución identifique qué materias requieren reforzamiento en los planes de estudio.
+
 
 ---
 
@@ -48,4 +48,4 @@ La aplicación se construyó utilizando componentes nativos y librerías especia
 El código sigue un diseño limpio y escalable enfocado en buenas prácticas de desarrollo:
 * **Herencia y Polimorfismo:** Implementación de una clase base abstracta `Persona` de la cual heredan de manera limpia las clases `Estudiante` y `Tutor`, compartiendo atributos esenciales (nombre, email, contraseña) y reutilizando métodos de inicio de sesión.
 * **Encapsulamiento:** Protección de datos sensibles mediante atributos privados y métodos de acceso controlados para la gestión segura de las cuentas.
-* **Control de Concurrencia Lógica:** La clase `SesionTutoria` valida matemáticamente que no existan cruces de horarios para un mismo tutor ni sobrecupos en las sesiones agendadas.
+
